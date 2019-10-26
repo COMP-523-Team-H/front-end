@@ -8,9 +8,11 @@ class About extends Component {
   }
 
   componentDidMount() {
-    fetch('http://backend-jiyu2.cloudapps.unc.edu/0').then((res) => res.json()).then((body) => {
-      console.log(body);
-      this.setState({urls: body});
+    // Yu Ji fixed the call back and state setting
+    fetch('http://backend-jiyu2.cloudapps.unc.edu/api/workspace/0').then((res) => {
+      res.json().then((json)=>{
+        this.setState({urls: json});
+      });
     });
   }
 

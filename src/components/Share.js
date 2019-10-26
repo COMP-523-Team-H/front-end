@@ -4,9 +4,6 @@ import DropdownButton from "react-bootstrap/DropdownButton"
 import Dropdown from "react-bootstrap/Dropdown"
 
 class Share extends Component {
-
-    
-
     onClickHandler = event => {
         const buttonID = event.target.id;
         //copy button

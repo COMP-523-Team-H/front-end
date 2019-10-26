@@ -20,14 +20,11 @@ class Annotate extends Component {
   }
 
 
-
-
   render() {
 
     if(this.state.annotateOn === true){
       return (
         <Container>
-  
           <div style={{position:'absolute',left:'10px'}}>
             <div>
               <Share  />
@@ -67,8 +64,7 @@ class Annotate extends Component {
           
         </Container>
       )
-    }
-    
+    }  
     else{
       return (
         <Container>
@@ -99,19 +95,10 @@ class Annotate extends Component {
                 Annotate On/Off
               </Button>
   
-          </div>
-          
+          </div>   
         </Container>
       )
-
     }
-
-    
-
-
-
-
-
   }
 }
 

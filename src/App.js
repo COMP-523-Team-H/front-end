@@ -13,15 +13,9 @@ class App extends Component {
         <div className="App">
           <Navigation />
           <Switch>
-            <Route path="/annotate">
-              <Annotate />
-            </Route>
-            <Route path="/about">
-              <About />
-            </Route>
-            <Route path="/">
-              <Home />
-            </Route>
+            <Route path="/annotate" exact component = {Annotate}/>
+            <Route path="/about" exact component = {About}/>
+            <Route path="/" exact component = {Home}/>
           </Switch>
         </div>
       </Router>

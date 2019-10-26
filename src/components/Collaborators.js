@@ -4,18 +4,17 @@ import InputGroup from "react-bootstrap/InputGroup"
 import FormControl from "react-bootstrap/FormControl"
 import Button from "react-bootstrap/Button"
 
-var firstTime = true;
+// Yu Ji put firstTime into state
 
 class Collaborators extends Component {
-
 
     constructor(props) {
         super(props);
         this.state = {
             name: '',
-            namesArray: [] 
+            namesArray: [],
+            firstTime: true
         };
-    
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
       }
@@ -28,13 +27,11 @@ class Collaborators extends Component {
     handleSubmit(e) {
         let currentName = this.state.name
         this.setState(previousState => ({
-            namesArray: [...previousState.namesArray, currentName]
+            namesArray: [...previousState.namesArray, currentName],
+            firstTime:false
         }));
 
-        firstTime = false;
     }
-
-
 
     render() {
 
@@ -42,7 +39,7 @@ class Collaborators extends Component {
             <li key={data}>{data}</li> 
         );
 
-        if(firstTime){
+        if(this.state.firstTime){
             return(
                 <Container>
                     <InputGroup className="mb-3">

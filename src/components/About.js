@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React, { Component, Fragment } from "react"
 import URLList from "./URLList"
 
 
@@ -8,7 +8,7 @@ class About extends Component {
   }
 
   componentDidMount() {
-    fetch('http://localhost:8080/0').then((res) => res.json()).then((body) => {
+    fetch('http://backend-jiyu2.cloudapps.unc.edu/0').then((res) => res.json()).then((body) => {
       console.log(body);
       this.setState({urls: body});
     });
@@ -16,10 +16,10 @@ class About extends Component {
 
   render() {
     return (
-      <React.Fragment>
+      <Fragment>
         <h3>This is a stand-in for actual GET functionality.</h3>
         <URLList urls={this.state.urls} />
-      </React.Fragment>
+      </Fragment>
     )
   }
 }

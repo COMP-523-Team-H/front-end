@@ -1,10 +1,10 @@
 import React, { Component } from "react"
+import Container from "react-bootstrap/Container"
+import Button from "react-bootstrap/Button"
+
 import Collaborators from './Collaborators'
 import Share from './Share'
 import Website from './Website'
-
-import Container from "react-bootstrap/Container"
-import Button from "react-bootstrap/Button"
 
 class Annotate extends Component {
   state= {
@@ -12,7 +12,7 @@ class Annotate extends Component {
   }
 
   handleClick(e) {
-    if(this.state.annotateOn == true){
+    if(this.state.annotateOn === true){
       this.setState({annotateOn: false})
     }else{
       this.setState({annotateOn: true})
@@ -24,7 +24,7 @@ class Annotate extends Component {
 
   render() {
 
-    if(this.state.annotateOn == true){
+    if(this.state.annotateOn === true){
       return (
         <Container>
   

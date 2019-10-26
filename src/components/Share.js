@@ -10,19 +10,19 @@ class Share extends Component {
     onClickHandler = event => {
         const buttonID = event.target.id;
         //copy button
-        if(buttonID == 'copyButton'){
+        if(buttonID === 'copyButton'){
             //set what you want to copy here
             let copyContent = "monkeys "
             this.copyToClipboard(copyContent);
-            alert("'" + copyContent + "'" + " was copied to the clip board")
+            alert("'" + copyContent + "' was copied to the clip board")
 
         }
         //download button
-        else if(buttonID == 'downloadButton'){
+        else if(buttonID === 'downloadButton'){
             alert("download clicked")
         }
         //email button
-        else if(buttonID == 'emailButton'){
+        else if(buttonID === 'emailButton'){
             alert("Email clicked")
         }
       } 
@@ -35,7 +35,7 @@ class Share extends Component {
         dummy.select();
         document.execCommand("copy");
         document.body.removeChild(dummy);
-    }
+      }
 
   render() {
     
